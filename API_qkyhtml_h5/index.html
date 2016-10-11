@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>学生档案_主页</title>
+<!--框架css-->
+<link  href="css/animate.css" rel="stylesheet" type="text/css"/><!--css3 动画库-->
+<link href="css/common_h5.css" rel="stylesheet" type="text/css"/><!--公共css-->
+<link href="css/qkyui2.0.css" rel="stylesheet" type="text/css"/><!--ui控件css-->
+<link href="css/qkyuih5_theme_xsda.css" rel="stylesheet" type="text/css"/><!--ui控件主题颜色风格css-->
+<link  href="css/swiper-3.3.1.min.css" rel="stylesheet" type="text/css"/><!--ui控件css-->
+<!--附加css-->
+<link href="css/xsda.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="bil/jqui1.11.4/jquery-ui.min.js" ></script>
+<script language="JavaScript" charset="utf-8" src="js/getpy.js"></script>
+<script language="JavaScript" charset="utf-8" src="js/qky_h5ui.js"></script>
+<script language="JavaScript" charset="utf-8" src="js/swiper-3.3.1.min.js"></script>
+<!--插件js-->
+
+</head>
+<body class="qkybody h100 po_ab">
+
+<!--头部标准，一般固定-->
+<div class="qkyh5_header noshadow">
+    <div class="qkyh5_topbox ub ub-ac ba_top co_ff pa_lr16 po_r">
+        <a class="iskuai wd_20 co_ff oth_stubut" ><i class="appicon fz_24">&#xe601;</i></a>
+        <div class="ub-f1 fz_20 fz_we t_c pa_tb12">学生档案</div>
+        <a class="iskuai wd_20 co_ff t_r" href="index.html"><i class="appicon fz_24">&#xe602;</i></a>
+        <div class="oth_stubox trn">
+            <a class="clear3 po_r" href="index_fltj.html"><i class="appicon fl fz_24 co_ff po_ab">&#xe611;</i>分类汇总</a>
+            <a class="clear3 po_r" href="index.html"><i class="appicon fl fz_24 co_ff po_ab">&#xe612;</i>学生档案</a>
+        </div>
+    </div>
+    <div class="qkysel wd_100 br_b br_ddd">
+        <div class="selshow br_fff co_z1 inp pa_tb6 ba_fa  pl0">
+            <a class="selectON dian3 t_c wd_100 pr0" id="ks_type">
+                <label><span class="spone fz_20 co_z1 fz_we">一年级</span><span class="sptwo fz_20 co_z1 fz_we">(2)班</span></label>
+                <i class="appicon ml6 fz_22">&#xe600;</i>
+            </a>
+            <div class="optionbox h40 clear3 trn">
+            	<div class="zd"></div>
+                <div class="swiper-container sp_one wd_50 fl"><div class="swiper-wrapper">
+                    <div class='swiper-slide'><a class="option">一年级</a></div>
+                    <div class='swiper-slide'><a class="option">二年级</a></div>
+                    <div class='swiper-slide'><a class="option">三年级</a></div>
+                    <div class='swiper-slide'><a class="option">四年级</a></div>
+                </div></div>
+                <div class="swiper-container sp_two wd_50 fr"><div class="swiper-wrapper">
+                    <div class='swiper-slide'><a class="option">（1）班</a></div>
+                    <div class='swiper-slide'><a class="option">（2）班</a></div>
+                    <div class='swiper-slide'><a class="option">（3）班</a></div>
+                </div></div> 
+            </div>  
+        </div>
+    </div>
+</div>
+
+<!--中部标准，一般放列表-->
+<div class="qkyh5_main  h100 box_b pb0">
+   <div class=" h100 po_r">
+   <div class="qky_zmulbox wd_100 h100 socrllbox" id="qky_zmulbox"></div>
+   <div class="qky_zmselbox wd_8 h100 socrllbox" id="qky_zmselbox"></div> 
+   </div>	
+</div>
+
+
+<!--列表模板-->
+<div class="yc" id="ren_model">
+	<a class="renli trn iskuai" href="index_studa.html">
+       <div class="ub ub-ac br_b br_ddd pa_b10 pa_tb8">
+           <div class="rentx mr20"><img src="images/tx.png" width="60" height="60" class="brra_50"></div>
+           <div class="ub-f1">
+               <div class="ub ub-ac"><label class="iskuai fz_20 fz_we co_z3 renname">王旺旺</label><b class="renzc qkybut hbg  fz_12 li_he20 brra_4 ml6 iskuai">班长</b></div>
+               <div class=" renxh fz_16 co_z3 mt10">20100363698233</div>
+           </div>
+       </div>
+   </a>
+</div>
+
+<script>
+ var datas=[
+ ["tx.png","关瑞荣",["班长","#ff9710"],"20100363698233"],
+ ["tx.png","蔡勇剑",["学生","#6299b5"],"20100363698233"],
+ ["tx.png","桂莹",["团委","#f86161"],"20100363698233"],
+ ["tx.png","黄慧芳",["学生","#6299b5"],"20100363698233"],
+ ["tx.png","林静杰",["学习委员","#04be02"],"20100363698233"],
+ ["tx.png","万洪泉",["副班长","#ff9710"],"20100363698233"],
+ ["tx.png","王霖",["学生","#6299b5"],"20100363698233"],
+ ["tx.png","王转转",["学生","#6299b5"],"20100363698233"],
+ ["tx.png","吴泳芝",["学生","#6299b5"],"20100363698233"],
+ ["tx.png","谢帅",["学生","#6299b5"],"20100363698233"],
+ ["tx.png","杨洪彩",["学生","#6299b5"],"20100363698233"],
+ ["tx.png","杨鹏",["学生","#6299b5"],"20100363698233"],
+ ["tx.png","zilwteaf",["学生","#6299b5"],"20100363698233"],
+ ["tx.png","#ljls",["学生","#6299b5"],"20100363698233"]
+ ];
+
+//滚动下拉选择插件赋值（核心，一定要渲染完后再执行）
+var sp_one = new Swiper('.sp_one', {
+	direction: 'vertical',
+	loop : true,
+	slidesPerView :3,
+	centeredSlides : true,
+	onSlideChangeEnd: function(){
+		$(".spone").html($(".sp_one .swiper-slide-active a").html());
+	}
+});
+var sp_two = new Swiper('.sp_two', {
+	direction: 'vertical',
+	loop : true,
+	slidesPerView :3,
+	centeredSlides : true,
+	onSlideChangeEnd: function(){
+		$(".sptwo").html($(".sp_two .swiper-slide-active a").html());	
+	}
+});
+
+$(function(){
+	qkyh5_topa_header(0,1);	
+	oth_stubut();
+	qkysel_news();
+	qky_zmlist("#qky_zmulbox","#qky_zmselbox",datas,2,"#ren_model",function(rthis){
+		rthis.parents(".qky_zmulbox").find(".renli").removeClass("cur");
+		rthis.addClass("cur");
+	});
+
+});
+</script>
+</body>
+</html>

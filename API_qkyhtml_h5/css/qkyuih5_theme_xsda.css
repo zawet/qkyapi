@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* CSS Document */
+/*************************************************************
+基础信息：
+	主明：此css全课云ui主题风格，一个应用用一套主题风格，也可以同用一套主题风格，按需求来定，
+	命名规则为：前面以 "qkyuih5_theme_"开头，后面加上对应应用的简写拼音，比如名师工作室的主题风格就为"qkyui_theme_ms.css"
+	初始化版本号：1.0;
+	初始化人员：zwt;
+	日期：2016/08/11;
+***************************************************************/
+
+/***********文字颜色风格**********/
+.co_bl{ color:#04acf7 !important;}/*蓝*/
+.co_bl2{ color:#3fc1fd !important;}/*蓝2（淡）*/
+.co_sbl{ color:#3e4659 !important;}/*超深蓝*/
+.co_ye{ color:#ff9710!important;}/*黄*/
+.co_ye2{ color:#ffcf10!important;}/*黄2（淡）*/
+.co_gr{ color:#04be02!important;}/*绿*/
+.co_gr2{ color:#71bb2a!important;}/*绿2（淡）*/
+.co_or{ color:#f98222!important;}/*橘*/
+.co_or2{ color:#fdd010!important;}/*橘2（淡）*/
+.co_red{ color:#f86161 !important;}/*红*/
+
+/***********背景颜色风格**********/
+.ba_bl{ background:#04acf7 !important;}/*蓝*/
+.ba_bl2{ background:#3fc1fd !important;}/*蓝2（淡）*/
+.ba_sbl{ background:#7d828f !important;}/*蓝2（淡）*/
+.ba_ye{ background:#ff9710!important;}/*黄*/
+.ba_ye2{ background:#ffcf10!important;}/*黄2（淡）*/
+.ba_gr{ background:#04be02!important;}/*绿*/
+.ba_gr2{ background:#32b754!important;}/*绿2（淡）*/
+.ba_or{ background:#f98222!important;}/*橘*/
+.ba_or2{ background:#fdd010!important;}/*橘2（淡）*/
+.ba_red{ background:#f86161 !important;}/*红*/
+
+/***********边颜色**********/
+.brc_bl{ border-color:#04acf7 !important;}/*蓝*/
+.brc_bl2{ border-color:#3fc1fd !important;}/*蓝2（淡）*/
+.brc_sbl{ border-color:#7d828f !important;}/*蓝2（淡）*/
+.brc_ye{ border-color:#ff9710!important;}/*黄*/
+.brc_ye2{ border-color:#ffcf10!important;}/*黄2（淡）*/
+.brc_gr{ border-color:#04be02!important;}/*绿*/
+.brc_gr2{ border-color:#32b754!important;}/*绿2（淡）*/
+.brc_or{ border-color:#f98222!important;}/*橘*/
+.brc_or2{ border-color:#fdd010!important;}/*橘2（淡）*/
+.brc_red{ border-color:#f86161 !important;}/*红*/
+
+/************************************qkyui颜色风格制定***************************/
+.qkybody{ background:#f2f1f6;}
+.ba_top{ background:#3a393f;}
+.qkyh5_header{ box-shadow:0 1px 3px #ddd;}
+.qkyh5_header.noshadow{box-shadow:none;}
+.qkyh5_barnav{border-bottom:1px solid #eee; background:#fafafa;}
+.qkyh5_barnav a{color:#666; border-bottom:2px solid #fafafa;} 
+.qkyh5_barnav a.cur{ border-color:#04be02; color:#04be02}
+.qkyh5_search{background: #f1f0f6;}
+.lcmore{color:#666;}
+.lcmore.on{ color:#2eb8eb;}
+.qkyh5_footbg{background:#f2f1f6;}
+.footer { box-shadow:0 0 4px #eee;}
+.footer li {background:url(../images/public_icon/footbgline.gif) no-repeat 0 center;background:#04be02; color:#fff;}
+
+
+/*下拉颜色风格制定*/
+.qkysel{color:#666;}
+.qkysel .selftxt{background:#a2a2a2; color:#fff;}
+.qkysel .seltxt b{ color:#E70509 !important;}
+.qkysel .selshow{ border:1px solid #eee; background: url(../images/public_icon/selicon.png) no-repeat 96% center #fff;}
+.qkysel .selshow.upsel{ background-image: url(../images/public_icon/seliconup.png)}
+.qkysel .selshow.onlybt{border:none; border-bottom:1px solid #eee;}
+.qkysel .selshow.inp{ background:#fff;}
+.qkysel .selshow.inp.hicon{ background:#fff;}
+.qkysel .selshow.inp.hicon .timeicon{ color:#c4c4c4;}
+.qkysel .selshow.inp.hicon .u_d{color:#00bb9a;}
+.qkysel .selshow.inp.hicon .u_d i.noc{ color:#888;}
+.qkysel .selshow.inp input[type='text'],.qkysel .selshow.inp input[type='date']{color:#666; }
+.qkysel .optionbox{background:rgba(59,58,64,0.8);}
+.qkysel .optionbox a.option{color:#fff;}
+/*.qkysel .optionbox a.option:hover,.qkysel .optionbox a.option.cur{ font-size:22px; background:rgba(181,181,181,0.5);}*/
+.qkysel .optionbox div.option a.twosel{  border-bottom:1px solid #eee;background: url(../images/public_icon/selicon.png) no-repeat 98% center #fff;}
+.qkysel .optionbox2 a.option2:hover{background:#00bb9a; color:#fff;}
+
+/*平行输入框和按颜色风格制定钮*/
+.qkyinp{background:#fcfcfc; border:1px solid #ececec;}
+.qkyinp .inptext input{color:#666;}
+.qkyinp .inpbut a{color:#666; }
+
+
+/*按钮颜色风格制定*/
+.qkybut{}
+.qkybut.lk{border:1px solid; background:#fff !important; }
+.qkybut.hbg{ color:#fff !important; }
+.qkybut.but_bl{ background:#04acf7 ;color:#04acf7;border-color:#04acf7;}/*蓝*/
+.qkybut.but_bl2{ background:#3fc1fd ;color:#3fc1fd; border-color:#3fc1fd;}/*蓝2（淡）*/
+.qkybut.but_sbl{ background:#7d828f ;color:#7d828f; border-color:#7d828f;}/*深蓝*/
+.qkybut.but_ye{ background:#ff9710;color:#ff9710; border-color:#ff9710;}/*黄*/
+.qkybut.but_ye2{ background:#ffcf10;color:#ffcf10;border-color:#ffcf10;}/*黄2（淡）*/
+.qkybut.but_gr{ background:#04be02;color:#04be02;border-color:#04be02;}/*绿*/
+.qkybut.but_gr2{ background:#32b754;color:#32b754; border-color:#32b754;}/*绿2（淡）*/
+.qkybut.but_or{ background:#f98222;color:#f98222;border-color:#f98222;}/*橘*/
+.qkybut.but_or2{ background:#fdd010;color:#fdd010;border-color:#fdd010;}/*橘2（淡）*/
+.qkybut.but_red{ background:#f86161;color:#f86161;border-color:#f86161;}/*红*/
+
+.qkybut.hbg:hover{box-shadow:0 1px 4px #ddd; background:#576b95; border-color:#576b95;}
+.qkybut.lk:hover{box-shadow:0 1px 4px #ddd; border-color:#576b95; color:#576b95;}
+
+
+.qkybut.tline{border-top:1px  solid #f6f6f6;color:#00bb9a; background:#fafafa;}
+.qkybut.tline:hover{ color:#fff; background:#00bb9a;border-color:#00bb9a;}
+.qkybut.bline{ border-bottom:4px  solid #fff;color:#00bb9a; background:#fff;}
+.qkybut.bline:hover,.qkybut.bline.cur{background:#fff;border-color:#ffae00; color:#ffae00;}
+
+/*连体按钮颜色风格制定*/
+.qkybut_lt a{background:#fff;border:1px solid #13b1bb;color:#13b1bb;}
+.qkybut_lt a:hover,.qkybut_lt a.cur{ background:#13b1bb; color:#fff;}
+
+
+/*分页颜色风格制定*/
+.qkypage a{ border:1px solid #ddd;background:#fff; color:#666; }
+.qkypage a.cur,.qkypage a:hover{ background:#2b9b89; color:#fff; border-color:#2b9b89;}
+.qkypage a.no{ color:#aaa; border-color: #eee; background:#fff;}
+
+
+/*弹窗基础颜色风格制定*/
+
+.qky_maskbg{background: url(../images/public_icon/bg100.png);}
+.qky_maskmian{background:#fff;}
+.qky_masktit{  color:#19181e;}
+.qky_maskcont .sigtext{color:#7f7f81; }
+.qky_maskbuts{border-top:1px solid #ddd;}
+.qky_maskbuts a.one{ border-right:1px solid #ddd; color:#7f7f81;}
+.qky_maskbuts a:hover{ background:#fafafa;}
+
+
+
+/*自主复选框颜色风格制定*/
+.qkychbox{ background:#fff; border:1px solid #ccc;color:#fff;}
+.qkychboxs i{color:#fff !important;}
+.qkychbox.cur{ background:#04be02; border-color:#04be02;}
+.qkychbox.type2.cur{ border-color:#04be02; color:#04be02; background:#fff;}
+
+
+/*文本框颜色风格制定*/
+.qkytextarea .ta_tit{ color:#666; }
+.qkytextarea textarea{ background:#fff; border:1px solid #eee; color:#a2a2a2;}
+.qkytextarea.p100 textarea{ color:#666;}
+.qkyh1{color:#666;}
+
+
+/*日历颜色风格制定*/
+.qky_calendar{background:#fff;box-shadow:0 2px 4px #c8c8c8; border:1px solid #eee;}
+.qky_calsel{color:#666;}
+.qky_calsel .calselshow{ border:1px solid #ececec; background: url(../images/public_icon/selicon.png) no-repeat 96% center #fafafa;}
+.qky_calsel .calselshow.upsel{ background-image: url(../images/public_icon/seliconup.png)}
+.qky_calsel .caloptionbox{background:#fff; border:1px solid #ececec;}
+.qky_calsel .caloptionbox a.option{ color:#777; background:#fff;}
+.qky_calsel .caloptionbox a.option:hover{ background:#04be02; color:#fff;}
+.qky_calendar .showdate{ color:#04be02;}
+.qky_cal_tab th{ background:#04be02; color:#fff; box-shadow:0 2px 4px #c8c8c8;}
+.qky_cal_tab td{ color:#666; border-color:#f1f1f1;}
+.qky_cal_tab tr td:first-of-type{ border-left:1px solid #f1f1f1;}
+.qky_cal_tab td .today{ background:#079805; color:#fff;}
+.qky_cal_tab td .oldday{ background:#e6e6e6;}
+.qky_cal_tab td a[type='news']:hover,.qky_cal_tab td a.cur{ background:#04be02;color:#fff;}
+
+
+/*交互导航颜色风格制定*/
+.qkynav{ background:#fff;}
+.qkynav label{ color:#00bb9a; border-bottom:1px solid #f1f1f1;}
+.qkynav ul li{color:#666; height:36px;}
+.qkynav ul li.cur{ color:#00bb9a;}
+
+/*伸头导航颜色风格制定*/
+.qkynav_zu a{background:#717171;color:#fff;}
+.qkynav_zu a:hover,.qkynav_zu a.cur{ background:#71bb2a;}
+
+/*表格基础颜色风格制定*/
+.qkytable th{ background:#7e8390; color:#fff;  box-shadow:0 2px 4px #c8c8c8;}
+.qkytable tr.even td{ background:#f6f6f6;}
+.qkytable td{ color:#a2a2a2;  border-color:#f1f1f1; background:#e9eaf1}
+.qkytable td.one{ border-left:1px solid #f1f1f1;}
+.qkytable.type2 th{background:#b5c334;box-shadow:0 2px 4px #839010;}
+.qkytable.type2 tr.even td{ background:#fffcf4;}
+.qkytable.type3 th{background:#ffedc6;box-shadow: none; color:#eda363;border-right:1px solid #ffe3a8; }
+.qkytable.type3 tr.uptit th{ background:#26747d; border-color:#26747d; color:#fff; }
+.qkytable.type3 td{border-color:#ffe3a8;}
+.qkytable.type3 tr.even td{ background:#fffcf4;}
+.qkytable.qian_color th{background:#82d6db;box-shadow:0 1px 4px #ffffff; }
+
+.qkytit_box.so{ border-bottom:1px solid #eee;}
+.qkytit_box.da{ border-bottom:1px dashed #eee;}

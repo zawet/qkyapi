@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+.qkyinfobox{ background:#3b3a40; padding:16px 8px;}
+
+.sexcho.nan.cur .qkychbox{ color:#04acf7 !important;}
+.sexcho.nan.cur label{ color:#04acf7 !important;}
+.sexcho.nv.cur .qkychbox{ color:#f86161 !important;}
+.sexcho.nv.cur label{ color:#f86161 !important;}
+
+.infokuai{ width:92%; margin:16px auto; border-radius:8px; border:1px solid #ddd; background:#fff;}
+.infokuai_tit{ background:#04be02; color:#fff; text-align: center; padding:10px 0; border-radius:8px 8px 0 0; font-size:20px;}
+.ik_li{ border-bottom:1px dashed #bbb; padding:14px 0;}
+
+.x_yuan{ display:inline-block; width:8px; height:8px; border-radius:50%; background:#04be02; margin-right:8px;}
+.sx_but{ padding:4px 10px; border-right:1px solid #ddd; color:#787878;}
+
+
+.h100{ height:100%;}
+.hauto{ height:auto !important;}
+.h40{height:186px;}
+.h260{height:260px;}
+.socrllbox{ overflow-y:scroll;}
+.xscorll{ overflow-x:scroll; overflow-y:hidden;}
+.tyle_li{ width:80%; display:block; margin:0 auto; padding:16px 0; text-align: center; font-size:18px; color:#a3a3a3; border-bottom:1px solid #ddd;}
+.tyle_li.cur{ width:100%; background:#fff; color:#04be02; border-color:#ccc; }
+
+.zuzhi_li{ width:90%; display:block; margin:0 0 0 10%; padding:16px 0; text-align: left; font-size:18px; color:#343339; border-bottom:1px solid #eee;}
+.zuzhi_li.cur{ color:#04be02; border-color:#ccc; }
+
+.oth_stubox{ width:100%; background:rgba(59,58,64,0.8); position:absolute; left:0; top:100%; z-index:9; transform:translateY(-200%)}
+.oth_stubox.show{transform:translateY(0)}
+.oth_stubox a{ font-size:20px; color:#fff; text-align:center; display:block; padding:10px 16px; border-bottom:1px solid #d1d1d1;}
+.oth_stubox a i{ left:16px; top:10px;}
+
+.dbg_bl{ background:#effaff;}
+.dbg_ye{ background:#fbfaf4;}
+.dbg_gr{ background:#fafff1;}
+
+.xiyuan{display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;}
