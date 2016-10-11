@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+/*************************************************************
+基础信息：
+	主明：此css全课云ui主题风格，一个应用用一套主题风格，也可以同用一套主题风格，按需求来定，
+	命名规则为：前面以 "qkyui_theme_"开头，后面加上对应应用的简写拼音，比如名师工作室的主题风格就为"qkyui_theme_ms.css"
+	初始化版本号：1.0;
+	初始化人员：zwt;
+	日期：2016/08/11;
+***************************************************************/
+
+/***********文字颜色风格**********/
+.co_bl{ color:#04acf7!important;}/*蓝*/
+.co_bl2{ color:#e0e7f6 !important;}/*蓝2（淡）*/
+.co_sbl{ color:#3e4659 !important;}/*超深蓝*/
+.co_ye{ color:#f39d0a!important;}/*黄*/
+.co_ye2{ color:#faab58!important;}/*黄2（淡）*/
+.co_gr{ color:#2b9b89!important;}/*绿*/
+.co_gr2{ color:#71bb2a!important;}/*绿2（淡）*/
+.co_or{ color:#f98222!important;}/*橘*/
+.co_or2{ color:#fdd010!important;}/*橘2（淡）*/
+.co_red{ color:#f26d7e !important;}/*红*/
+
+/***********背景颜色风格**********/
+.ba_bl{ background:#04acf7 !important;}/*蓝*/
+.ba_bl2{ background:#e0e7f6 !important;}/*蓝2（淡）*/
+.ba_sbl{ background:#3e4659 !important;}/*蓝2（淡）*/
+.ba_ye{ background:#f39d0a!important;}/*黄*/
+.ba_ye2{ background:#faab58!important;}/*黄2（淡）*/
+.ba_gr{ background:#2b9b89!important;}/*绿*/
+.ba_gr2{ background:#71bb2a!important;}/*绿2（淡）*/
+.ba_or{ background:#f98222!important;}/*橘*/
+.ba_or2{ background:#fdd010!important;}/*橘2（淡）*/
+.ba_red{ background:#f26d7e !important;}/*红*/
+
+/***********边颜色**********/
+.brc_bl{ border-color:#04acf7 !important;}/*蓝*/
+.brc_bl2{ border-color:#e0e7f6 !important;}/*蓝2（淡）*/
+.brc_sbl{ border-color:#3e4659 !important;}/*蓝2（淡）*/
+.brc_ye{ border-color:#f39d0a!important;}/*黄*/
+.brc_ye2{ border-color:#faab58!important;}/*黄2（淡）*/
+.brc_gr{ border-color:#2b9b89!important;}/*绿*/
+.brc_gr2{ border-color:#71bb2a!important;}/*绿2（淡）*/
+.brc_or{ border-color:#f98222!important;}/*橘*/
+.brc_or2{ border-color:#fdd010!important;}/*橘2（淡）*/
+.brc_red{ border-color:#f26d7e !important;}/*红*/
+
+/************************************qkyui颜色风格制定***************************/
+
+/*主框架颜色风格制定*/
+.qky_header .header1{ background:#04acf7; height:48px;}/*头部主导航背景色*/
+.qky_header .header2{ background:#f3f3f3;}/*头部顶部背景色*/
+.qky_top_navs li a{color:#fff;}/*头部主导航按钮字颜色*/
+.qky_top_navs li a:hover,.qky_top_navs li .cur{ background:#3fc1fd;}/*头部主导航按钮滑动和选中背景颜色*/
+.qky_top_search a{color:#666;}/*头部顶部用户信息字颜色*/
+.qky_top_button a{border:1px solid #e7e7e7;  color:#666;}/*头部顶部返回按钮颜色搭配*/
+.qky_top_button a:hover{ border:1px solid #04acf7; color:#fff; background:#04acf7;}/*头部顶部返回按钮滑动颜色搭配*/
+.qky_tab{border-color:#ddd; color:#fff;}/*头部导航右部按钮颜色搭配*/
+.qky_footer{ background:#fff;}/*底部背景色*/
+.qky_footer div{ color:#666;}/*底部字颜色*/
+
+/*下拉颜色风格制定*/
+.qkysel{color:#666;}
+.qkysel .selftxt{background:#a2a2a2; color:#fff;}
+.qkysel .seltxt b{ color:#E70509 !important;}
+.qkysel .selshow{ border:1px solid #eee; background: url(../images/public_icon/selicon.png) no-repeat 96% center #fff;}
+.qkysel .selshow.upsel{ background-image: url(../images/public_icon/seliconup.png)}
+.qkysel .selshow.onlybt{border:none; border-bottom:1px solid #eee;}
+.qkysel .selshow.inp{ background:#fff;}
+.qkysel .selshow.inp.hicon{ background:#fff;}
+.qkysel .selshow.inp.hicon .timeicon{ color:#04acf7;}
+.qkysel .selshow.inp.hicon .u_d{color:#04acf7;}
+.qkysel .selshow.inp.hicon .u_d i.noc{ color:#888;}
+.qkysel .selshow.inp input[type='text'],.qkysel .selshow.inp input[type='date']{color:#666; }
+.qkysel .selshow.text textarea{color:#666;} 
+.qkysel .optionbox{ border:1px solid #eee;}
+.qkysel .optionbox a.option{color:#777; }
+.qkysel .optionbox a.option:hover{ background:#04acf7; color:#fff;}
+.qkysel .optionbox div.option a.twosel{  border-bottom:1px solid #eee;background: url(../images/public_icon/selicon.png) no-repeat 98% center #fff;}
+.qkysel .optionbox2 a.option2:hover{background:#04acf7; color:#fff;}
+
+/*平行输入框和按颜色风格制定钮*/
+.qkyinp{background:#fcfcfc; border:1px solid #ececec;}
+.qkyinp .inptext input{color:#666;}
+.qkyinp .inpbut a{color:#666; }
+
+
+/*按钮颜色风格制定*/
+.qkybut{box-shadow:0 1px 3px #e1e1e1;}
+.qkybut.sigzi{ color:#666;}
+.qkybut.sigzi:hover,.qkybut.sigzi.cur{ color:#04acf7; }
+.qkybut.hbg{background:#04acf7; color:#fff;}
+.qkybut.hbg:hover,.qkybut.hbg.cur{box-shadow:0 1px 4px #ddd; background:#04acf7; border-color:#04acf7;}
+.qkybut.fhbg{background:#71bb2a; color:#fff;border-color:#71bb2a;}
+.qkybut.fhbg:hover,.qkybut.hbg.cur{box-shadow:0 1px 4px #ddd; background:#04acf7; border-color:#04acf7;}
+.qkybut.lk{ border-color:#e6e6e6; background:#fff;color:#666; }
+.qkybut.lk.fan{border-color:#04acf7; color:#04acf7;}
+.qkybut.lk:hover,.qkybut.lk.cur{border-color:#04acf7; color:#04acf7;}
+.qkybut.lk.fan:hover,.qkybut.lk.fan.cur{ background:#04acf7; color:#fff;}
+
+
+
+
+
+/*分页颜色风格制定*/
+.qkypage a{ border:1px solid #ddd;background:#fff; color:#666; }
+.qkypage a.cur,.qkypage a:hover{ background:#04acf7; color:#fff; border-color:#04acf7;}
+.qkypage a.no{ color:#aaa; border-color: #eee; background:#fff;}
+
+
+/*弹窗基础颜色风格制定*/
+
+.qky_maskbg{background: url(../images/public_icon/bg100.png);}
+.qky_maskmian{background:#fff;}
+.qky_masktit{  color:#fff;background:#04acf7; border-bottom:1px  solid #04acf7;}
+.qky_masktit_b{ color:#FFF; background:#04acf7;}
+.qky_maskcont .sigtext{color:#04acf7; }
+.qky_maskbuts{ border-top:1px solid #f0f0f0; background:#fcfcfc;}
+.maskBut{color:#a9e444; }
+.maskBut.one{ border-right:1px  solid #f0f0f0;}
+
+
+/*自主复选框颜色风格制定*/
+.qkychbox{ background:#fff; border:1px solid #ccc;color:#fff;}
+.qkychbox i{color:#fff !important;}
+.qkychbox.cur{ background:#04acf7; border-color:#04acf7;}
+.qkychbox.type2.cur{ border-color:#04acf7; color:#04acf7; background:#fff;}
+
+
+/*文本框颜色风格制定*/
+.qkytextarea .ta_tit{ color:#666; }
+.qkytextarea textarea{ background:#fff; border:1px solid #eee; color:#a2a2a2;}
+.qkytextarea.p100 textarea{ color:#666;}
+.qkyh1{color:#666;}
+
+
+/*日历颜色风格制定*/
+.qky_calendar{background:#fff;box-shadow:0 2px 4px #c8c8c8; border:1px solid #eee;}
+.qky_calsel{color:#666;}
+.qky_calsel .calselshow{ border:1px solid #ececec; background: url(../images/public_icon/selicon.png) no-repeat 96% center #fafafa;}
+.qky_calsel .calselshow.upsel{ background-image: url(../images/public_icon/seliconup.png)}
+.qky_calsel .caloptionbox{background:#fff; border:1px solid #ececec;}
+.qky_calsel .caloptionbox a.option{ color:#777; background:#fff;}
+.qky_calsel .caloptionbox a.option:hover{ background:#04acf7; color:#fff;}
+.qky_calendar .showdate{ color:#04acf7;}
+.qky_cal_tab th{ background:#04acf7; color:#fff; box-shadow:0 2px 4px #c8c8c8;}
+.qky_cal_tab td{ color:#666; border-color:#f1f1f1;}
+.qky_cal_tab tr td:first-of-type{ border-left:1px solid #f1f1f1;}
+.qky_cal_tab td .today{ background:#04acf7; color:#fff;}
+.qky_cal_tab td .oldday{ background:#e6e6e6;}
+.qky_cal_tab td a[type='news']:hover,.qky_cal_tab td a.cur{ background:#04acf7;color:#fff;}
+
+
+/*交互导航颜色风格制定*/
+
+.qkynav label{}
+.qkynav ul li{color:#666;}
+.qkynav ul li a{ color:#666; display:block;}
+.qkynav ul li.cur{ color:#04acf7;}
+
+/*伸头导航颜色风格制定*/
+.qkynav_zu a{background:#717171;color:#fff;}
+.qkynav_zu a:hover,.qkynav_zu a.cur{ background:#71bb2a;}
+
+/*表格基础颜色风格制定*/
+.qkytable th{ background:#04acf7; color:#fff;}
+.qkytable tr.even td{ background:#fff;}
+.qkytable td{ color:#787878;  border-color:#eee; background:#f6fafc}
+.qkytable td.one{ border-left:1px solid #eee;}
+
+
+/*N级导航树*/
+
+
+.qky_njclick:hover{ background:#ddf0cc; }
+.qky_njend:hover,.qky_njend.cur{ background:#ddf0cc;}
