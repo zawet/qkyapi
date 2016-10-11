@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header1 .qkysel{ line-height:48px; border-color:#3fc1fd !important;}
+.header1 .qkysel:hover{ background:#3fc1fd;}
+
+.main_bg h1{ line-height:54px; font-size:24px;display:block; position:relative;}
+.main_bg h2{ padding:0 16px;line-height:50px; font-size:20px;display:block; position:relative; background:#f1f1f1;border-bottom:1px solid #eee; border-radius:6px ;}
+.api_so.two{ background:#fefefe; border-radius: 0 0 6px 6px; margin-top:-6px;  padding-top:6px;}
+.main_bg h3{line-height:38px; font-size:16px; display:block; border-bottom:1px dashed #eee; position:relative;}
+.main_bg h4{line-height:34px; font-size:14px;}
+.main_bg{ border-radius:4px; background:#ddd; border:1px solid #ddd; box-shadow:0 0 4px 3px #5a5a5a;}
+.api_k{ padding:0 24px 16px ; margin-bottom:16px;}
+.api_code{ display:block; background:#fff; margin-top:10px; border-radius:6px; border:1px solid #ddd;}
+.iconup{ cursor:pointer;}
+
+.qky_njclick.one{ color:#fff;}
+.qky_njclick.two{ color:#eee;}
+.api_r .qky_njclick:hover,.api_r .qky_njclick.cur{ background:none; color:#04acf7;  }
+.api_r .qky_njend:hover,.qky_njend.cur{ background:none;color:#04acf7;font-size:14px !important;}
+.qky_njbox.one{ display:none;}
+.qky_njbox.one.cur{ display:block;}
+
+.api_sos.two{ display:none;}
+.api_nav{ position:fixed; width:200px; right:0; top:60px;}
+.ba_53{ background:#535353!important;}
+.ba_32{ background:#323232!important;}
+

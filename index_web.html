@@ -1,0 +1,986 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>全课云移动前端API</title>
+<!--框架css-->
+<link href="API_qkyhtml_h5/css/common_h5.css" rel="stylesheet" type="text/css"/>
+<link href="API_qkyhtml_h5/css/qkyui2.0.css" rel="stylesheet" type="text/css"/>
+<link href="API_qkyhtml_h5/css/qkyuih5_theme_xsda.css" rel="stylesheet" type="text/css"/>
+<!--附加css-->
+
+<link href="apiweb.css" rel="stylesheet" type="text/css"/>
+
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="API_qkyhtml_h5/bil/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="API_qkyhtml_h5/bil/jqui1.11.4/jquery-ui.min.js" ></script>
+<script language="JavaScript" charset="utf-8" src="API_qkyhtml_h5/js/qky_h5ui.js"></script>
+<script language="JavaScript" charset="utf-8" src="API_qkyhtml_h5/js/qkyui_cal.js"></script>
+<script type="text/javascript" src="code.js"></script>
+<!--插件js-->
+</head>
+<body class="ba_53">
+
+<!--顶部-->
+<div class="qky_header" style=" box-shadow:0 1px 3px #666; height:48px; overflow:hidden;">
+  <div class="header1">
+    <div class="qky_top_box clear3">
+        <ul class="qky_top_navs wd_100">
+        	<li><img src="images/LOGO.png"  class="wd_90"></li>
+            <li><a href="index.html" class=" fz_16">桌面端API</a></li>
+            <li><a href="index_web.html" class=" fz_16 cur">移动端API</a></li>
+            <!--<li class="fr"><a class="option trn dian3 co_ff"   href="index_404.html">移动端文件下载</a></li>-->
+            <li class="fr"><a class="option trn dian3 co_ff" value="H5_API"  href="../API_qkyhtml_h5.rar"  id="pic1" onclick="savepic();return false;"   style="cursor:hand">移动端下载</a></li>
+        </ul>          
+    </div>
+  </div>
+</div>
+
+<!--中部-->
+<div class="qky_content">
+  <div class="qky_main ">
+  
+  <div class="api_zt wd_80 ">
+  
+  	<div class="main_bg brra_8 mb16">
+        <h1 id="all"><b>1.总体说明</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h1>
+        <div class="api_so one">
+            <h2 id="all_fill"><b>1.1.文件系统</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+                <div class="api_k">
+                	<h3>1.1.1.结构说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">本规范通过规范html代码，js代码，css代码，图标字体化，插件应用形成，自主UI，前端编写规范！文件系统由<em class="co_ye">"bil"</em>,<em class="co_ye">"css"</em>,<em class="co_ye">"iconfont"</em>,<em class="co_ye">"images"</em>,<em class="co_ye">"js"</em>五大文件加一个示例<em class="co_bl">"index.html"</em>页面组成，<em class="co_bl">index.html</em>可以随意编写！整个项目下载请点击右上角！</span>
+                    <img src="images/api1.0.jpg" class="iskuai ma_lrauto ma_tb10 wd_100"/>
+                    <span class="iskuai lh28"><em class="co_ye">"bil"</em>文件：是专门放那些库文件的，如jq！此规范使用的是1.90的jq和默认连接jqUI做拖拉效果；</span>
+                    <img src="images/apiweb1.1.jpg" class="iskuai ma_lrauto ma_tb10 "/>
+                    <span class="iskuai lh28"><em class="co_ye">"css"</em>文件：是放置公用规范css代码，和qkyUIcss代码，以及附带一个qkytheme主题（整个网站的颜色风格储存地）；</span>
+                    <img src="images/apiweb1.2.jpg" class="iskuai ma_lrauto ma_tb10 "/>
+                    <span class="iskuai lh28"><em class="co_ye">"iconfont"</em>文件：放置两个图标字体库，一个<em class="co_ye">"appicon"</em>（一个项目的专属的图标字体库），一个<em class="co_ye">"qkyicon"</em>（全规范使用的图标字体库）;里面的demo.html就是图标查询页面，可以本地打开查看此字体库拥有什么图标；</span>
+                    <img src="images/apiweb1.3.jpg" class="iskuai ma_lrauto ma_tb10 "/>
+                    <span class="iskuai lh28"><em class="co_ye">"images"</em>文件：是放置图片素材的文件，里面有个<em class="co_ye">"public_icon"</em>是放置为了兼容ie8-而做的图标或者背景，top放置头底部公用图（比如LOGO文件），本身可以随意放切块图片；</span>
+                    <img src="images/apiweb1.4.jpg" class="iskuai ma_lrauto ma_tb10 "/>
+                    <span class="iskuai lh28"><em class="co_ye">"js"</em>文件：是放置javascript代码文件的地方，此规范默认放置qkyui的js事件，和一个专属日历插件的js，如果页面上不需要日历插件可以不调用此js文件；</span>
+                    <img src="images/apiweb1.5.jpg" class="iskuai ma_lrauto ma_tb10 "/>
+                    </div>
+                </div>
+            </div>
+            <h2 id="all_hw"><b>1.2.头部底部规范</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>1.2.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain"></div>
+                </div>
+                <div class="api_k">
+                    <h3>1.2.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo"></div> 
+                </div>
+                <div class="api_k">
+                    <h3>1.2.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+                
+            </div>
+            <h2 id="all_css"><b>1.3.样式规划</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+                <div class="api_k">
+                	<h3>1.3.1.common.css文件说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">此规范是通过叠加样式形成页面的主题思路进行规范，所以指定了很多公用css块！公用css主块一共11块！如下图</span>
+                    <img src="images/api3.1.jpg" class="iskuai ma_lrauto ma_tb10 wd_100"/>
+                    
+                    <span class="iskuai lh28">各css块凡涉及到数字值的，一律只有偶数值，如字体大小，从<em class="co_red">"fz_12"</em>开始，一直递进到<em class="co_red">"fz_100"</em>,30以前是2单位进制，后面的是10进制！</span>
+                    <span class="iskuai lh28">应用时只需要把对应的样式叠加一起一起就行了，比如我要宽度为百分50，左浮动，内边距四周16像素,就写成
+                    <span class="qkycode"><div class=" wd_50 fl pa_16"></div></span>样式之间空个格</span>
+                    </div>
+                </div>
+            </div>
+            <h2 id="all_float"><b>1.4.关于盒子弹性布局</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>1.4.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain">
+                    <span class="iskuai lh28"></span>
+                    </div>
+                </div>
+            	<div class="api_k">
+                    <h3>1.4.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo"></div>
+                </div>
+                <div class="api_k">
+                    <h3>1.4.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>   
+            </div>
+        </div> 
+    </div>
+    
+    <div class="main_bg brra_8 mb16">
+        <h1 id="input"><b>2.输入UI</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h1>
+        <div class="api_so one">
+            <h2 id="input_sel"><b>2.1.下拉选项（伪下拉菜单）</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	
+            </div>
+            <h2 id="input_cal"><b>2.2.日历插件</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	
+            </div>
+            <h2 id="input_ud"><b>2.3.上下选择按钮</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	
+            </div>
+            <h2 id="input_icon"><b>2.4.带图标输入框</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	
+            </div>
+            <h2 id="input_text"><b>2.5.文本框</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	
+            </div>
+        </div> 
+    </div>
+    
+    <div class="main_bg brra_8 mb16">
+        <h1 id="button"><b>3.按钮UI</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h1>
+        <div class="api_so one">
+        	<h2 id="button_best"><b>3.1.按钮配置基础</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>3.1.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">1,按钮UI可用任何标签去定义，最建议是用<span class="qkycode"><button></button></span>标签，但我本人一般用<span class="qkycode"><a></a></span>标签</span>	
+                    <span class="isinku lh28">2,按钮基础配置:<br/>
+                    一个标签里加入<span class="co_red ">"qkybut hbg trn auto brra_4"</span>样式,如：<span class="qkycode"><a class="qkybut hbg trn auto brra_4">有背景颜色按钮</a></span> 其中样式按顺序是，总定义UI控件，定义类型（背景hbg/镂空lk），过度动画，大小（XL/L/M/XM/S/wd_2~100/auto），圆角；<br/>
+                    然而颜色默认跟头部主色调，也可以自定义公用颜色：如：<span class="qkycode"><a class="qkybut hbg trn auto brra_4 ba_bl">蓝色按钮</a></span>；<br/>
+                    高度默认为32px，有两个高度挡位选择:<br/>
+                    大按钮48px高度<span class="co_red">"max_cbut"</span><span class="qkycode"><a class="qkybut hbg trn auto brra_4 ba_bl max_cbut">大蓝色按钮</a></span><br/>
+                    中按钮40px高度<span class="co_red">"min_cbut"</span><span class="qkycode"><a class="qkybut hbg trn auto brra_4 ba_bl min_cbut">大蓝色按钮</a></span>  
+                    </span>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>3.1.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                        <a class="qkybut hbg trn auto brra_4 fl mr10">有背景颜色按钮</a>
+                        <a class="qkybut hbg trn auto brra_4 ba_bl fl mr10">蓝色按钮</a>
+                        <a class="qkybut hbg trn auto brra_4 ba_bl max_cbut fl mr10">大蓝色按钮</a>
+                        <a class="qkybut hbg trn auto brra_4 ba_bl min_cbut fl">大蓝色按钮</a>
+                        <div class="clear ma_tb10"></div>
+                        <a class="qkybut lk trn auto brra_4 fl mr10">有背景颜色按钮</a>
+                        <a class="qkybut lk trn auto brra_4 brc_bl co_bl fl mr10 ">蓝色按钮</a>
+                        <a class="qkybut lk trn auto brra_4 brc_bl co_bl max_cbut fl mr10">大蓝色按钮</a>
+                        <a class="qkybut lk trn auto brra_4 brc_bl co_bl min_cbut fl">大蓝色按钮</a>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>3.1.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+            </div>
+            <h2 id="button_lk"><b>3.2.镂空按钮</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>3.2.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">镂空的按钮就是加上了"lk"的按钮，基本配置只能配置边框线颜色和文字颜色/大小，可以在文字前加图标文字库图标，如
+                    <span class="qkycode"><a class="qkybut lk trn auto brra_4 fl mr10"><i class="qkyicon">图标代码</i>镂空按钮</a></span>,图标代码查看点<a target="_blank" href="../API_qkyhtml_pc/iconfont/qkyicon_font/demo.html">这里</a></span>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>3.2.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    	<a class="qkybut lk trn auto brra_4 fl mr10">镂空按钮</a>
+                        <a class="qkybut lk trn auto brra_4 brc_bl co_bl fl mr10 ">镂空蓝色按钮</a>
+                        <a class="qkybut lk trn auto brra_4 brc_bl co_bl max_cbut fl mr10">镂空大蓝色按钮</a>
+                        <a class="qkybut lk trn auto brra_4 brc_bl co_bl min_cbut fl">镂空中蓝色按钮</a>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>3.2.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>   
+            </div>
+            <h2 id="button_bg"><b>3.3.背景按钮</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>3.3.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">
+                    <span class="iskuai lh28">有背景的按钮就是加上了"hbg"的按钮，基本配置能配置边框线颜色，背景色和文字颜色/大小，可以在文字前加图标文字库图标，如
+                    <span class="qkycode"><a class="qkybut lk trn auto brra_4 fl mr10"><i class="qkyicon">图标代码</i>有背景颜色按钮</a></span>,图标代码查看点<a target="_blank" href="../API_qkyhtml_pc/iconfont/qkyicon_font/demo.html">这里</a></span>
+                    </span>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>3.3.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    	<a class="qkybut hbg trn auto brra_4 fl mr10">有背景颜色按钮</a>
+                        <a class="qkybut hbg trn auto brra_4 ba_bl fl mr10">蓝色按钮</a>
+                        <a class="qkybut hbg trn auto brra_4 ba_bl max_cbut fl mr10">大蓝色按钮</a>
+                        <a class="qkybut hbg trn auto brra_4 ba_bl min_cbut fl">中蓝色按钮</a>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>3.3.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+            </div>
+            <h2 id="button_lt"><b>3.4.连体按钮</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>3.4.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">连体按钮主要设计来放置在需要切换页面的页面上，算好子类的宽度，不如两个就默认宽度为50%了，三个就33%，最右边靠右抵消多出来的1%；以此类推！可以配置背景颜色，字体大小，滑动后背景颜色和字体颜色！点击效果需要调用<span class="co_red">qkybut_lt()</span>;</span>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>3.4.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    	<div class="qkybut_lt clear3 wd_30 ma_lrauto">
+                            <a class="trn fz_18 cur">按钮1</a>
+                            <a class="trn fz_18">按钮2</a>
+                        </div>
+                        <div class="qkybut_lt clear3 mt16 wd_60 ma_lrauto">
+                            <a class="trn fz_18 cur wd_33">按钮1</a>
+                            <a class="trn fz_18 wd_33">按钮2</a>
+                            <a class="trn fz_18 wd_33 fr">按钮3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>3.4.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    
+    <div class="main_bg brra_8 mb16">
+        <h1 id="chbox"><b>4.选择UI</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h1>
+        <div class="api_so one">
+        	<h2 id="chbox_best"><b>4.1.选择配置基础</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>4.1.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">1,UI说明：此UI是替换html的<span class="qkycode"><input type="radio"><input type="checkbox"></span>两个表单标签，由于这个两个表单标签无法自由更换样式，所以此前端规范特意拿<em class="co_gr">"a"</em>标签来伪装！</span>
+                    <span class="iskuai lh28">2,基础架构:此UI由<em class="co_gr">"a"</em>进行伪装，如<span class="qkycode"><a class="qkychbox fang trn"><i class="qkyicon">&#xe69f;</i></a></span> 这样配置复选框，单选框为<span class="qkycode"><a class="qkychbox yuan trn"><i class="qkyicon">&#xe69f;</i></a></span>; </span>
+                    <span class=" iskuai lh28">3,js调用：
+                    	<span class="qkycode co_red">
+                        qkychbox() //默认调用复选框公用；
+                        qkychbox_id_fun(id,fun) //指定id单独调用复选框点击事件，后面扩展点击后事件；
+                        qkychbox_sigle()//默认执行全部单选按钮，注意：这里你只要是一个页面有多处单选组，只要分别用个div做父类就能形成多个组的效果
+                        qkychbox_sigle_id_fun(id,fun) //指定id单独调用单选框点击事件，后面扩展点击后事件；
+                        </span>
+                    </span>
+                    <span class=" iskuai lh28">4,基础样式配置：可以随意更改选框大小，默认有3个档选择<em class="co_red">"w16","w18","w20"</em>,分别代表宽高16px,18px,20px;背景色和边框色的配置请查阅公用css！</span>
+                    </div>
+                </div>
+            </div>
+            <h2 id="chbox_sige"><b>4.2.单选（yuan）</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+                <div class="api_k">
+                    <h3>4.2.1.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    <div class="qkysel clear3">
+                        <a class="qkychbox yuan trn h34 mt8 fl "><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组1单选1</label>
+                        <a class="qkychbox yuan trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组1单选2</label>
+                        <a class="qkychbox yuan trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组1单选3</label>
+                        <a class="qkychbox yuan trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组1单选4</label>
+                        <a class="qkychbox yuan trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组1单选5</label>
+                        <a class="qkychbox yuan trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组1单选6</label>
+                    </div>
+                    <div class="qkysel clear3 mt16">
+                        <a class="qkychbox yuan trn h34 mt8 fl "><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组2单选1</label>
+                        <a class="qkychbox yuan trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组2单选2</label>
+                        <a class="qkychbox yuan trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组2单选3</label>
+                        <a class="qkychbox yuan trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组2单选4</label>
+                        <a class="qkychbox yuan trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组2单选5</label>
+                        <a class="qkychbox yuan trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">组2单选6</label>
+                    </div>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>4.2.2.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+            </div>
+            <h2 id="chbox_fx"><b>4.3.复选（fang）</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                    <h3>4.3.1.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    <div class="qkysel clear3">
+                   	<a class="qkychbox fang trn h34 mt8 fl "><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">复选1</label>
+                    <a class="qkychbox fang trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">复选2</label>
+                    <a class="qkychbox fang trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">复选3</label>
+                    <a class="qkychbox fang trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">复选4</label>
+                    <a class="qkychbox fang trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">复选5</label>
+                    <a class="qkychbox fang trn h34 mt8 fl ml16"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">复选6</label>
+                    </div>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>4.3.2.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+            </div>
+            <h2 id="chbox_fxgroup"><b>4.4.联动复选组（zhu—zi）</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>4.1.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                    <span class="iskuai lh28">1,基础配置：此联动复选组是专门给表格时全选操作设置的，只要一个<span class=" co_red">"qkychbox"</span> 设置了<span class=" co_red">"zhu"</span>样式，然后通过id联动<span class="co_red">"zi"</span>样式的<span class="co_red">"qkychbox"</span>，id连接规则是，<span class="co_red">"zhu"</span>样式id的值一定要等于<span class="co_red">"zi"</span>样式的id值里"_"前面的值，所以<span class="co_red">"zi"</span>样式的id一定要以【(zhu样式id)_】为开头，后面随意命名！具体请看演示和代码！ </span>
+                    <span class="iskuai lh28">2,js调用： 在有默认的复选框执行js"qkychbox()"下在调用<span class="qkycode co_red">liandai_chbox() //联动复选组，zhu—zi联动js ；</span></span>
+                    </div>
+                </div>
+            	<div class="api_k">
+                    <h3>4.3.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    <div class="qkysel clear3">
+                   	<a class="qkychbox fang trn h34 mt8 fl zhu" id="demo"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">主复选</label>
+                    <div class="clear"></div>
+                    <a class="qkychbox fang trn h34 mt8 fl ml16 zi" id="demo_1"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">子复选1</label>
+                    <a class="qkychbox fang trn h34 mt8 fl ml16 zi" id="demo_2"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">子复选2</label>
+                    <a class="qkychbox fang trn h34 mt8 fl ml16 zi" id="demo_3"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">子复选3</label>
+                    <a class="qkychbox fang trn h34 mt8 fl ml16 zi" id="demo_4"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">子复选4</label>
+                    <a class="qkychbox fang trn h34 mt8 fl ml16 zi" id="demo_5"><i class="qkyicon">&#xe69f;</i></a><label class="ml6 fl">子复选5</label>
+                    </div>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>4.3.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    
+    <div class="main_bg brra_8 mb16">
+        <h1 id="nav"><b>5.导航</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h1>
+        <div class="api_so one">
+        	<h2 id="nav_zu"><b>5.1.导航组</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>5.1.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">导航条类型，有竖着版带下拉的，有横着的，有横着带下拉子项的！需要那种就直接复制对应代码，然后进行自行基础配置（改颜色改字大小改背景色）,都可以通过公共css进行配置,点击效果需要调用<span class="co_red">qkynav()</span>;</span>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>5.1.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                        <div class="wd_30">
+                            <div class="qkynav one">
+                                <label class="co_bl"><i class="qkyicon mr6">&#xe6a0;</i>竖版导航组1<a class="trn"><i class="qkyicon">&#xe681;</i></a></label>
+                                <ul>
+                                    <li class="cur"><a><i class="qkyicon mr6">&#xe6a0;</i>子项1</a></li>
+                                    <li><a><i class="qkyicon mr6">&#xe6a0;</i>子项2</a></li>
+                                    <li><a><i class="qkyicon mr6">&#xe6a0;</i>子项3</a></li>
+                                    <li><a><i class="qkyicon mr6">&#xe6a0;</i>子项4</a></li>
+                                </ul>
+                            </div>
+                            <div class="qkynav one mt16">
+                                <label class="co_bl"><i class="qkyicon mr6">&#xe6a0;</i>竖版导航组2<a class="trn"><i class="qkyicon">&#xe681;</i></a></label>
+                                <ul>
+                                    <li class="cur"><a><i class="qkyicon mr6">&#xe6a0;</i>子项1</a></li>
+                                    <li><a><i class="qkyicon mr6">&#xe6a0;</i>子项2</a></li>
+                                    <li><a><i class="qkyicon mr6">&#xe6a0;</i>子项3</a></li>
+                                    <li><a><i class="qkyicon mr6">&#xe6a0;</i>子项4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="wd_100 mt16">
+                        	<ul class="qkynavs clear3 ba_bl">
+                            <li><a  class="navs cur co_ff">横导航选项1</a></li>
+                            <li><a  class="navs co_ff">横导航选项2</a></li>
+                            <li><a  class="navs co_ff">横导航选项3</a></li>
+                            <li><a  class="navs co_ff">横导航选项4</a></li>
+                            <li><a  class="navs co_ff">横导航选项5</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="wd_100 mt16">
+                        	<ul class="qkynavs clear3 ba_bl">
+                            <li class="wd_auto po_r">
+                                <label class="co_ff fz_14">横版导航组2<a class="trn"><i class="qkyicon">&#xe681;</i></a></label>
+                                <ul class="navsul ba_ff">
+                                    <li class="cur"><a><i class="qkyicon mr6">&#xe6a0;</i>子项1</a></li>
+                                    <li><a><i class="qkyicon mr6">&#xe6a0;</i>子项2</a></li>
+                                    <li><a><i class="qkyicon mr6">&#xe6a0;</i>子项3</a></li>
+                                    <li><a><i class="qkyicon mr6">&#xe6a0;</i>子项4</a></li>
+                                </ul>
+
+                            </li>
+                            <li><a class="navs co_ff">横导航选项2</a></li>
+                            <li><a class="navs co_ff">横导航选项3</a></li>
+                            <li><a class="navs co_ff">横导航选项4</a></li>
+                            <li><a class="navs co_ff">横导航选项5</a></li>
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>5.1.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+            </div>
+            <h2 id="nav_nj"><b>5.2.N级导航</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>5.2.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">1:以<em class="co_red">"qky_njnav"</em> class作为父类包含 a标签<em class="co_red">"qky_njclik"</em>作为点击层，然后<em class="co_red">"qky_njbox"</em>层作为该级隐藏包含层，不断这样层层嵌套下，就能形成N级导航的效果;</span>
+                   	<span class="iskuai lh28">2:最后一层的a标签以<em class="co_red">"qky_njend"</em>作为级数结束层，a标签层里面怎么写自由;</span>
+                   	<span class="iskuai lh28">3:最后一层的点击函数自由定义，可以直接用<em class="co_red">"qky_njend"</em>来循环点击;</span>
+                   	<span class="iskuai lh28">4:最后在执行js里执行<em class="co_red">"qky_njnav()"</em> ,N级导航布置成功！</span>
+                   	<span class="iskuai lh28">5:可以复制代码，然后修改最后一层点击事件和布局</span>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>5.2.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo">
+                        <div class="qky_njnav">
+                            <a class="iskuai clear3 qky_njclick">
+                                <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                <span class="fl co_z6 fz_16">中山市第一中学</span>
+                            </a>
+                            <div class="qky_njbox pl8 mt6">
+                                <a class="iskuai clear3 qky_njclick">
+                                    <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                    <span class="fl co_z6 fz_16">高一</span>
+                                </a>
+                                <div class="qky_njbox pl8">
+                                    <a class="iskuai clear3 qky_njclick">
+                                        <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                        <span class="fl co_z6 fz_16">(1)班</span>
+                                    </a>
+                                    <div class="qky_njbox pl8">
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                    </div>
+                                    <a class="iskuai clear3 qky_njclick">
+                                        <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                        <span class="fl co_z6 fz_16">(2)班</span>
+                                    </a>
+                                    <div class="qky_njbox pl8">
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                    </div>
+                                </div>
+                                <a class="iskuai clear3 qky_njclick">
+                                    <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                    <span class="fl co_z6 fz_16">高二</span>
+                                </a>
+                                <div class="qky_njbox pl8">
+                                    <a class="iskuai clear3 qky_njclick">
+                                        <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                        <span class="fl co_z6 fz_16">(1)班</span>
+                                    </a>
+                                    <div class="qky_njbox pl8">
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="iskuai clear3 qky_njclick">
+                                <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                <span class="fl co_z6 fz_16">中山市第一中学</span>
+                            </a>
+                            <div class="qky_njbox pl8 mt6">
+                                <a class="iskuai clear3 qky_njclick">
+                                    <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                    <span class="fl co_z6 fz_16">高一</span>
+                                </a>
+                                <div class="qky_njbox pl8">
+                                    <a class="iskuai clear3 qky_njclick">
+                                        <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                        <span class="fl co_z6 fz_16">(1)班</span>
+                                    </a>
+                                    <div class="qky_njbox pl8">
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                    </div>
+                                    <a class="iskuai clear3 qky_njclick">
+                                        <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                        <span class="fl co_z6 fz_16">(2)班</span>
+                                    </a>
+                                    <div class="qky_njbox pl8">
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                    </div>
+                                </div>
+                                <a class="iskuai clear3 qky_njclick">
+                                    <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                    <span class="fl co_z6 fz_16">高二</span>
+                                </a>
+                                <div class="qky_njbox pl8">
+                                    <a class="iskuai clear3 qky_njclick">
+                                        <i class="appicon co_gr fz_20 mr6 fl">&#xe610;</i>
+                                        <span class="fl co_z6 fz_16">(1)班</span>
+                                    </a>
+                                    <div class="qky_njbox pl8">
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                        <a class="qky_njend clear3 trn">唐老鸭</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>5.2.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>  
+            </div>
+            <h2 id="nav_st"><b>5.3.伸头导航</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>5.3.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">伸头导航通常用在一个<span class="qkycode"><div></div></span>上面，有种伸出头来一样的感觉，只要把下面代码放到你要伸头导航对应<span class="qkycode"><div></div></span>的上面就行了，注意宽度对个数的限制，一般不超过5个，基础配置同导航组一样,点击效果通过直接跳转页面进行cur样式的添加</span>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>5.3.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    	<div class="qkynav_zu clear3">
+                            <a class="cur trn"><i class="qkyicon mr6">&#xe6a0;</i>伸头导航选项1</a>
+                            <a class="trn"><i class="qkyicon mr6">&#xe6a0;</i>伸头导航选项2</a>
+                            <a class="trn"><i class="qkyicon mr6">&#xe6a0;</i>伸头导航选项3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>5.3.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    
+    <div class="main_bg brra_8 mb16">
+        <h1 id="mask"><b>6.弹窗UI</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h1>
+        <div class="api_so one">
+        	<h2 id="mask_best"><b>6.1.弹窗基础</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>6.1.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">1,主体框架：弹窗由主体<em class="co_red">"qky_maskbox"</em>作为绝对定位满屏层父类，<em class="co_red">"qky_maskbg"</em>作为满屏绝对定位的遮罩层，<em class="co_red">"qky_maskmain"</em>作为弹层显示中心，默认写好标题<em class="co_red">"qky_masktit"</em>和底部按钮，中间由<em class="co_red">"qky_maskcont"</em>作为自定义内容存放区，按钮也放到这层里！</span>
+                    <span class="iskuai lh28">2,执行弹窗规则：每个弹窗的最外层父类，也就<em class="co_red">"qky_maskbox"</em>上都要带一个独一无二的id（除提示弹窗），然后通过要弹层的标签上加入点击事件<em class="qkycode">"onClick="popIn('#id')"</em>,就能弹窗了！</span>
+                    <Span class="iskuai lh28">3,弹窗基础配置：弹窗的<em class="co_red">"qky_maskmain"</em>显示中心可以设置宽度档位，如演示所示！标题栏可以设置背景色和字体大小/颜色，按钮同按钮UI配置！</Span>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>6.1.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    	<div class="qky_maskbox" id="szzqr">
+                        	<div class="qky_maskbg"></div>
+                            <div class="qky_maskmian XL">
+                                <div class="qky_masktit">弹窗标题<a class="maskclose" onClick="popOut('#szzqr')"><i class="qkyicon">&#xe6aa;</i></a></div>
+                                <div class="qky_maskcont pa_lr20 pt12">
+                                	<!--自定义内容区域，放要弹出的层的内容s-->
+                                    <div class="qkysel mb12 clear3">
+                                        <div class="seltxt fl wd_26 t_r">弹窗内容：</div>
+                                        <div class="selshow fl inp wd_68 br_nall">可以放置任何内容</div>
+                                    </div>
+                                    <div class="qkysel mb12 clear3">
+                                        <div class="seltxt fl wd_26 t_r">弹窗说明：</div>
+                                        <div class="selshow fl inp wd_68 br_nall">弹窗自动以屏幕大小自动居中，高度按照放的内容决定！</div>
+                                    </div>
+                                    <div class="qkysel mb12 clear3">
+                                        <div class="seltxt fl  wd_26 t_r">宽度档位：</div>
+                                        <div class="selshow fl  wd_68 br_ddd">
+                                            <a class="selectON dian3" id="ks_type">XL</a>
+                                            <div class="optionbox ba_fa">
+                                            <a class="option trn dian3" value="L">L</a>
+                                            <a class="option trn dian3" value="XL">XL</a>
+                                            <a class="option trn dian3" value="XXL">XXL</a>
+                                            <a class="option trn dian3" value="XXXL">XXXL</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--自定义内容区域，放要弹出的层的内容e-->
+                                    <div class="t_c mb26"><a class="qkybut hbg brad4 M "><i class="qkyicon mr6">&#xe701;</i>确认</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="qkybut hbg trn auto brra_4 mr10" onClick="popIn('#szzqr')">点击弹窗</a>
+                    	
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>6.1.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+            </div>
+            <h2 id="mask_tips"><b>6.2.提示性弹窗</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>6.2.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">提示性弹窗，就是指定了一个图标和一句话的弹窗，内容由外部传进去，js调用<span class="co_red">onClick="tipspop('提示标题','&#xe654;','提示要写的内容（只限文字）')"</span>,第一个是标题内容，第二个是图标代码（代码查询请看按钮UI那），第三个是提示的内容！</span>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>6.2.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    <a class="qkybut hbg trn auto brra_4 mr10" onClick="tipspop('提示标题','&#xe654;','提示要写的内容（只限文字）')">点击弹出提示性窗口</a>
+                     	<!--删除提示-->
+                        <div class="qky_maskbox" id="tips" >
+                            <div class="qky_maskbg"></div>
+                            <div class="qky_maskmian L">
+                                <div class="qky_masktit"><span id="titname"></span><a class="maskclose" onClick="popOut('#tips')"><i class="qkyicon">&#xe6aa;</i></a></div>
+                                <div class="qky_maskcont pa_lr16 pt16">
+                                    <i class="qkyicon co_z6" id="msgicon"></i>
+                                    <div class="" id="msgtxt"></div>
+                                    <div class="t_c mb26">
+                                    <a class="qkybut hbg brad4 M  mr16" onClick="popOut('#tips')"><i class="qkyicon mr6">&#xe701;</i>确定</a>
+                                    <a class="qkybut hbg brad4 M" onClick="popOut('#tips')"><i class="qkyicon mr6">&#xe6aa;</i>取消</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>6.2.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>   
+            </div>
+        </div> 
+    </div>
+    
+    <div class="main_bg brra_8 mb16">
+        <h1 id="table"><b>7.表格基础</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h1>
+        <div class="api_so one">
+        	<h2 id="tabel_hline"><b>7.1.有线框</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>3.2.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">1,表格基础配置：默认把表格自带的边框和边框距给屏蔽了，所以表格父类是<em class="qkycode"><table cellpadding="0" cellspacing="0" border="0" class="qkytable"></table></em>，表格标题栏默认背景颜色跟主色调，表格<em class="co_gr">"td"</em>在每一栏第一个加上<em class="co_red">"one"</em>样式，为了给第一个加边框样式！</span>
+                    <span class="iskuai lh28">2，其他基础配置扩展：只要在<em class="qkycode">"<table></table>"</em>上加个主样式，然后通过这个主样式改变内在<em class="co_gr">"td,th,tr"</em>的样式，如加个type主样式<em class="qkycode"><table cellpadding="0" cellspacing="0" border="0" class="qkytable type"></table></em>,<br/> 然后css上<br/>  <em class="co_red">.qkytable.type th{...}<br/> .qkytable.type tr.even td{...}<br/> .qkytable.type td{...}<br/> .qkytable.type td.one {...}  </em></span>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>3.2.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    	<table cellpadding="0" cellspacing="0" border="0" class="qkytable">
+                        <tr><th>表头1</th><th>表头2</th><th>表头3</th><th>表头4</th><th>表头5</th></tr>
+                        <tr><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr class="even"><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr class="even"><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        </table>
+                        
+                        <table cellpadding="0" cellspacing="0" border="0" class="qkytable mt16">
+                        <tr><th class="brra_topl8">表头1</th><th>表头2</th><th>表头3</th><th>表头4</th><th class="brra_topr8">表头5</th></tr>
+                        <tr><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr class="even"><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr class="even"><td class="one brra_bottoml8">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td class="brra_bottomr8">内容5</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>3.2.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+            </div>
+            <h2 id="tabel_nline"><b>7.2.无线框</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>7.2.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">基础配置，同上；只要在<em class="qkycode">"<table></table>"</em>上加个<em class="co_red">"noline"</em>样式，就会变成无边框形式</span>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>7.2.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    	<table cellpadding="0" cellspacing="0" border="0" class="qkytable noline">
+                        <tr><th>表头1</th><th>表头2</th><th>表头3</th><th>表头4</th><th>表头5</th></tr>
+                        <tr><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr class="even"><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr class="even"><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        </table>
+                        
+                        <table cellpadding="0" cellspacing="0" border="0" class="qkytable noline mt16">
+                        <tr><th class="brra_topl8">表头1</th><th>表头2</th><th>表头3</th><th>表头4</th><th class="brra_topr8">表头5</th></tr>
+                        <tr><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr class="even"><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr class="even"><td class="one">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+                        <tr ><td class="one brra_bottoml8">内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td class="brra_bottomr8">内容5</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>7.2.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+                
+            </div>
+        </div> 
+    </div>
+    
+    <div class="main_bg brra_8 mb16">
+        <h1 id="progress"><b>8.进度条</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h1>
+        <div class="api_so one">
+        	<h2 id="tprogress_besa"><b>8.1.进度条基础</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>8.1.1.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">进度条UI是由<em class="co_red">"qkyProgress"</em>为父类套<em class="co_red">"qkyProgress_zi"</em>形成的，所以只要改变<em class="co_red">"qkyProgress_zi"</em>的宽度就能达到进度的效果！<em class="co_red">"qkyProgress_show"</em>为显示信息层，浮在zi层上！<em class="co_red">"setqkyProgress(%,id)"</em>函数为设置指定id的进度条的百分值</span>
+                    </div>
+                </div>
+            	<div class="api_k">
+                    <h3>8.1.2.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    	<div class="qkyProgress wd_64 ma_lrauto">
+                            <div class="qkyProgress_zi wd_70 trn"></div>
+                            <div class="qkyProgress_show">进度条信息<span>70%</span></div>
+                        </div>
+                        
+                        <div class="qkyProgress wd_64 ma_lrauto animate mt16">
+                            <div class="qkyProgress_zi trn"></div>
+                            <div class="qkyProgress_show">进度条信息<span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>8.1.3.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+                
+            </div> 
+        </div> 
+    </div>
+    
+    <div class="main_bg brra_8 mb16">
+        <h1 id="page"><b>9.分页器</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h1>
+        <div class="api_so one">
+        	<h2 id="page_besa"><b>9.1.分页器配置</b><span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h2>
+            <div class="api_so two">
+            	<div class="api_k">
+                	<h3>9.1.3.说明<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_explain pa_16">
+                   	<span class="iskuai lh28">分页主要配置为不可点击,在<em class="co_gr">"a"</em>标签上加上<em class="co_red">"no"</em>样式，和点击后效果在<em class="co_gr">"a"</em>标签上加上<em class="co_red">"cur"</em>样式，基础配置跟其他UI一样</span>
+                    </div>
+                </div>
+            	<div class="api_k">
+                    <h3>9.1.1.演示<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_demo clear3 pt16">
+                    	<div class="qkypage">
+                            <a href="#" class="no">上一页</a>
+                            <a href="#" class="cur">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">下一页</a>
+                    	</div>
+                    </div>
+                </div>
+                <div class="api_k">
+                    <h3>9.1.2.代码<span class="po_ab_r iskuai pr16 co_bl iconup"><i class="qkyicon isinku trn">&#xe66f;</i></span></h3>
+                    <div class="api_code"></div>
+                </div>
+                
+            </div> 
+        </div> 
+    </div>
+    
+    
+  </div>
+  
+  <div class="api_nav box_b pl14">
+      <div class="qky_njnav  wd_100 api_r"></div>
+  </div>
+  
+  </div>
+</div>
+
+<!--底部-->
+<div class="qky_footer">
+  <div>全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+</div>
+<script>
+var hid=["all", "input", "button", "chbox", "nav", "mask", "table", "progress", "page"];
+var kk=[
+	["all_fill", "all_hw", "all_css","all_float"],
+	["input_sel", "input_cal", "input_ud", "input_icon", "input_text"],
+	["button_best", "button_lk", "button_bg", "button_lt"],
+	["chbox_best", "chbox_sige", "chbox_fx", "chbox_fxgroup"],
+	["nav_zu", "nav_nj", "nav_st"],
+	["mask_best", "mask_tips"],
+	["tabel_hline", "tabel_nline"],
+	["tprogress_besa"],
+	["page_besa"]
+];
+var berhei=$(".qky_header").outerHeight(true);
+var allh=[];
+var h2h=[];
+$(function(){
+	//api布局js
+	ystocode();
+	iconup();
+	$(".qkycode").each(function(i) {
+        $(this).htmlcode($(this));
+    });
+	
+	//示例js
+	qkysel_onlya(".qkysel.only");
+	qkysel_id_fun(".api_demo",function(thiss){});
+	$(".datetime").calendar();
+	qkyu_d();
+	qkybut_lt(function(this_){});
+	qkychbox();
+	qkychbox_sigle();
+	liandai_chbox();
+	qkynav();
+	qky_njnav();
+	var pgi=0;
+	var ll=setInterval(function(){
+		setqkyProgress(pgi,".animate");
+		pgi++;
+		if(pgi>100)clearInterval(ll);
+	},50);
+	
+	
+	//右导航
+	xrapi_r();
+	flnav(1000,".api_nav");
+	ciapi_r();
+	ciapi_r2();	
+	s_a();//滚动执行
+});
+
+function xrapi_r(){
+	var onehtml="";
+	$(".main_bg").each(function(i) {
+		onehtml+='<a class="qky_njclick iskuai fz_16 pl0 trn dian3 one" href="#'+hid[i]+'">'+$(this).find("h1 b").html()+'</a><div class="qky_njbox  one"></div>';
+    });
+	$(".api_r").html(onehtml);
+    $(".api_so.one").each(function(t) { 
+		$(this).find(".api_so.two").each(function(j) {
+			
+			$(".qky_njbox.one").eq(t).append('<a class="qky_njclick iskuai fz_12 pl16 dian3 two trn" href="#'+kk[t][j]+'">'+$(this).parent().find("h2").eq(j).find("b").html()+'</a><div class="qky_njbox two"></div>'); 
+			/*$(this).find("h3").each(function(i) {
+				$(".qky_njbox.one").eq(t).find(".qky_njbox.two").eq(j).append('<a class="qky_njend pl0 fz_12 pa_tb10  dian3 three">'+$(this).html()+'</a>');
+			});*/
+		});
+	});
+}
+function ciapi_r(){
+	$(".qky_njclick.one").each(function(i) {
+        $(this).click(function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+			anapi_r();
+		});
+    });
+	}
+	
+	function ciapi_r2(){
+	$(".qky_njclick.two").each(function(i) {
+        $(this).click(function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+		});
+    });
+	}
+function anapi_r(){
+	$(".qky_njclick.one").each(function(int) {
+       if( $(this).hasClass("cur")){
+		   $(".qky_njbox.one").slideUp();
+		$(this).next(".qky_njbox.one").first().slideDown(200);
+		}
+    });
+}
+
+//自动把演示的代码显示到代码框里；
+function ystocode(){
+	$(".api_demo").each(function(i) {
+        $(this).htmlcode($(this).parent().parent().find(".api_code"));
+    });
+}
+//收缩伸展函数
+function iconup(){
+	$(".iconup").each(function(i) {
+        $(this).click(function(){
+			$(this).find("i").toggleClass("r90");
+			$(this).parent().next().first().slideToggle(200,function(){
+			footinbottom(".qky_header",".qky_content",".qky_footer");
+			});
+		});
+    });
+}
+//点击下载函数
+function savepic(){   
+	if(document.all.a1==null){   
+		objIframe=document.createElement("IFRAME");   
+		document.body.insertBefore(objIframe);   
+		objIframe.outerHTML="<iframe name=a1 style='width:0;hieght:0' src="+pic1.href+"></iframe>";   
+		re=setTimeout("savepic()",1)   
+	}else{   
+		clearTimeout(re)   
+		pic=window.open(pic1.href,"a1")   
+		pic.document.execCommand("SaveAs")   
+		document.all.a1.removeNode(true)   
+	}
+}   
+
+//导航漂浮执行
+function flnav(maxw,id){
+	var w=$(window).width();
+	var rw;
+	if(w<=maxw) rw=0;
+	else rw=(w-maxw)/2;
+	$(id).css("right",rw+"px");
+}
+
+//滚动执行
+function s_a(){
+	$(window).scroll(function(){
+		var body_scr=document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+		
+		$(".main_bg").each(function(i) {
+			var kk=0;
+			for(var j=0;j<i;j++){
+				kk+=$(".main_bg").eq(j).outerHeight(true);
+			}
+			allh[i]=kk+berhei;
+			kk=0;	
+        });
+		$(".api_so.two").each(function(i) {
+			h2h[i]=$(this).prev("h2").first().offset().top+berhei;
+        });
+		//console.log(allh);
+		for(var l=0;l<allh.length;l++){
+			if(body_scr>=allh[l]&&body_scr<allh[l+1]){
+				    $(".qky_njbox.one").removeClass("cur").hide();
+					$(".qky_njclick.one").eq(l).addClass("cur");
+					$(".qky_njclick.one").eq(l).next(".qky_njbox.one").first().show().addClass("cur");
+				}else{
+					$(".qky_njclick.one").eq(l).removeClass("cur");	
+				}
+		}
+		if(body_scr<berhei){$(".qky_njbox.one").removeClass("cur").hide();}
+         for(var o=0;o<h2h.length;o++){
+			if(body_scr>=h2h[o]&&body_scr<h2h[o+1]){
+					$(".qky_njclick.two").eq(o).addClass("cur");
+				}else{
+					$(".qky_njclick.two").eq(o).removeClass("cur");	
+				}
+		}
+		 
+		
+	});	
+}
+</script> 
+</body>
+</html>

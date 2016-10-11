@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+.header1 .qkysel{ line-height:48px; border-color:#3fc1fd !important;}
+.header1 .qkysel:hover{ background:#3fc1fd;}
+
+.main_bg h1{ line-height:54px; font-size:24px;display:block; position:relative;}
+.main_bg h2{ padding:0 16px;line-height:50px; font-size:20px;display:block; position:relative; background:#f1f1f1;border-bottom:1px solid #eee; border-radius:6px ;}
+.api_so.two{ background:#fefefe; border-radius: 0 0 6px 6px; margin-top:-6px;  padding-top:6px;}
+.main_bg h3{line-height:38px; font-size:16px; display:block; border-bottom:1px dashed #eee; position:relative;}
+.main_bg h4{line-height:34px; font-size:14px;}
+.main_bg{ border-radius:4px; background:#ddd; border:1px solid #ddd; box-shadow:0 0 4px 3px #5a5a5a;}
+.api_k{ padding:0 24px 16px ; margin-bottom:16px;}
+.api_code{ display:block; background:#fff; margin-top:10px; border-radius:6px; border:1px solid #ddd;}
+.iconup{ cursor:pointer;}
+
+.qky_njclick.one{ color:#fff;}
+.qky_njclick.two{ color:#eee;}
+.api_r .qky_njclick:hover,.api_r .qky_njclick.cur{ background:none; color:#04be02;  }
+.api_r .qky_njend:hover,.qky_njend.cur{ background:none;color:#04be02;font-size:14px !important;}
+.qky_njbox.one{ display:none;}
+.qky_njbox.one.cur{ display:block;}
+
+.api_sos.two{ display:none;}
+.api_nav{ position:fixed; width:200px; right:0; top:60px;}
+.ba_53{ background:#535353!important;}
+.ba_32{ background:#323232!important;}
+
+/*顶部模块框架样式*/
+.qky_header{  position:fixed;width:100%; z-index:999999999; margin:0; left:0;top:0;}
+.qky_header .header1{ height:48px;}
+.qky_top_box{width:1000px;margin:0 auto;}
+.qky_top_txt{height:48px; line-height:48px;}
+.qky_logo{ padding:0; float:left; height:46px; line-height:16px;margin-right:20px;}
+.qky_logo img{ margin:6px 0 0; vertical-align:inherit;}
+.qky_top_navs{ float:left;}
+.qky_top_navs li{ float:left;line-height:48px; margin-right:2px;}
+.qky_top_navs li a{line-height:48px;  height:48px;font-size:14px; text-align:center;  display:block;padding:0 25px;}
+.qky_top_search{ float:right; text-align:right; margin-left:60px;height:48px; line-height:48px; overflow:hidden;}
+.qky_top_search a{ padding:0 8px; font-size:13px; display:inline-block; position:relative; }
+.qky_top_button{ width:112px; height:30px; float:right; margin-top:7px;}
+.qky_top_button a{  border-radius:4px; display:block; line-height:30px; text-align:center; cursor:pointer;}
+.qky_top_button a i{margin-right:6px;}
+.qky_tab{ height:48px; line-height:48px; padding:0 21px; border:1px solid ; border-bottom:none; border-top:none; margin-left:-1px; cursor:pointer;}
+/*中部模块框架样式*/
+.qky_content{ width:100%; height:auto;}
+/*中部导航模块框架样式*/
+.qky_nav { width:1000px; height:auto; margin:14px auto 0;}
+/*中部主要模块框架样式*/
+.qky_main{width:1000px; height:auto;  margin:0 auto; padding-top:16px;}
+
+/*主框架颜色风格制定*/
+.qky_header .header1{ background:#04be02; height:48px;}/*头部主导航背景色*/
+.qky_header .header2{ background:#f3f3f3;}/*头部顶部背景色*/
+.qky_top_navs li a{color:#fff;}/*头部主导航按钮字颜色*/
+.qky_top_navs li a:hover,.qky_top_navs li .cur{ background:#71bb2a;}/*头部主导航按钮滑动和选中背景颜色*/
+.qky_footer{ background:#fff;}/*底部背景色*/
+.qky_footer div{ color:#666;}/*底部字颜色*/
