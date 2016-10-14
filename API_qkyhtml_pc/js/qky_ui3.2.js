@@ -313,7 +313,7 @@ function tipspop(tit,iconcode,content){
 }
 //弹窗拖动和始终上下左右居中对齐
 function qkymaskmian_td(id,isdr){
-	var left=top=thisw=thish=0;
+	var left=0;var top=0;var thisw=0;var thish=0;
 	thisw=$(id).width();
 	thish=$(id).outerHeight();
 	left=$(window).width()-thisw;
